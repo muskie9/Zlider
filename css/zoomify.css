@@ -20,6 +20,7 @@ p{
 	margin: 100px auto;
 	overflow: hidden;
 	position: relative;
+	background: #aaa;
 }
 
 .holder ul{
@@ -33,6 +34,7 @@ p{
 .holder ul li{
 	height: 520px;
 	float: left;
+	position: relative;
 }
 
 ul li .year{
@@ -70,4 +72,11 @@ ul li .year{
 
 .active .year:hover .description{
 	display: block;
+}
+
+.holder ul li .back-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
 }
