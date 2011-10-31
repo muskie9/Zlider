@@ -1,0 +1,73 @@
+*{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: green;
+}
+
+p{
+	width: 780px;
+	margin: 15px auto;
+}
+
+.holder{
+	background: #eee;
+	width: 780px;
+	height: 520px;
+	margin: 100px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.holder ul{
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 520px;
+}
+
+.holder ul li{
+	height: 520px;
+	float: left;
+}
+
+ul li .year{
+	width: 2px;
+	height: 2px;
+	background: #fff;
+	float: left;
+	margin: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#out{
+	width: 780px;
+	margin: 15px auto;
+	cursor: pointer;
+	background: #fff;
+	padding: 5px;
+}
+
+.active .year{
+	position: relative;
+}
+
+.description{
+	display: none;
+	width: 250px !important;
+	height: 100px !important;
+	position: absolute;
+	bottom: -150px;
+	left: 15px;
+	background: #fff;
+}
+
+.active .year:hover .description{
+	display: block;
+}
