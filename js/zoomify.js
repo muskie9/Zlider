@@ -17,6 +17,14 @@ $(window).load(function(){
 	    $(this).css({'width':0,'height':0});
 	});
 	
+	//center image
+	$('.holder ul li').each(function(){
+		var liWidth = $(this).attr("alt");
+		var cur = $(this).attr("class");
+		var image = "."+cur+" .back-image";
+		$(image).css({'top':hHeight/2,'left':liWidth/2});
+	});
+	
 	//get full width of all slides
 	var width = 0;
 	$('.holder ul li').each(function() {
@@ -75,7 +83,7 @@ $(window).load(function(){
 		$(".holder ul").css({'width':mWidth});
 		$(".holder ul").animate({'left':(lWidth*(-1))}, inSpeed);
 		$(tracker).animate({'width':hWidth, 'height':hHeight}, inSpeed);
-		$(tracker+" .back-image").animate({'width':nW, 'height':nH,'opacity':imageOpacity},inSpeed);
+		$(tracker+" .back-image").animate({'width':nW, 'height':nH,'opacity':imageOpacity,'top':0,'left':0},inSpeed);
 		$(tChild).animate({'width':10,'height':10},inSpeed);
 		$(tracker).addClass("active");
 	});
@@ -89,7 +97,7 @@ $(window).load(function(){
 			cChild = "."+cChild+" .year";
 			$(this).animate({'width':oWidth},outSpeed);
 			$(".holder ul").animate({'width':width, 'left':0}, outSpeed);
-			$(".back-image").animate({'width':0,'height':0,'opacity':0},outSpeed)
+			$(".back-image").animate({'width':0,'height':0,'opacity':0,'top':hHeight/2,'left':oWidth/2},outSpeed)
 			$(cChild).animate({'width':2,'height':2}, outSpeed);
 		});
 
