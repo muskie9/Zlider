@@ -80,11 +80,12 @@ $(window).load(function(){
 		var word = mGet.split(" ");
 		var nW = word[0];
 		var nH = word[1];
+		var orig = 15;
 		$(".holder ul").css({'width':mWidth});
 		$(".holder ul").animate({'left':(lWidth*(-1))}, inSpeed);
 		$(tracker).animate({'width':hWidth, 'height':hHeight}, inSpeed);
 		$(tracker+" .back-image").animate({'width':nW, 'height':nH,'opacity':imageOpacity,'top':0,'left':0},inSpeed);
-		$(tChild).animate({'width':10,'height':10},inSpeed);
+		$(tChild).animate({'width':10,'height':10,'margin-right':orig*3},inSpeed);
 		$(tracker).addClass("active");
 	});
 	
@@ -98,7 +99,7 @@ $(window).load(function(){
 			$(this).animate({'width':oWidth},outSpeed);
 			$(".holder ul").animate({'width':width, 'left':0}, outSpeed);
 			$(".back-image").animate({'width':0,'height':0,'opacity':0,'top':hHeight/2,'left':oWidth/2},outSpeed)
-			$(cChild).animate({'width':2,'height':2}, outSpeed);
+			$(cChild).animate({'width':2,'height':2,'margin-right':15}, outSpeed);
 		});
 
 	});
